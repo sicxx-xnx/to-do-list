@@ -7,8 +7,9 @@
    },
    plugins: [
      new HtmlWebpackPlugin({
-       title: 'Production',
+       title: 'ToDoList',
        lang: 'en', // Add the lang attribute
+       template: "./src/template.html",
      }),
    ],
    output: {
