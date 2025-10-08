@@ -1,0 +1,40 @@
+*{
+box-sizing: border-box;    
+}
+.contentHolder {
+display: grid;
+grid-template-columns:  repeat(5,1fr);
+grid-template-rows:114px repeat(5,1fr); 
+height: 150vh;  
+}
+.headerHolder {
+grid-row:1/2;
+grid-column: 1/6;  
+padding: 5%;  
+background-color: rgb(188, 222, 234);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.header {
+height: 80px;
+width: 100%;
+background-color: white;    
+padding-left: 5%;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+.pickAProject{
+height: 50%;
+width: fit-content;
+border: 1px solid #222222;
+border-radius: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.dropDownArrowIcon{
+height: 80%;
+width: 25%;
+}
