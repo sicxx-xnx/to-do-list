@@ -9,9 +9,24 @@
  <div class="contentHolder">
     <div class="headerHolder">
         <div class="header"><div class="pickAProject"><p class="pickAProjectText">Creat A Task</p><img src="/src/images/8679858_arrow_drop_down_fill_icon.svg" alt="Drop Down Icon" class="dropDownArrowIcon"></div></div>
+        <div class="pickAProjectDropDown hidden">wrap</div>
     </div>
     <div class="SideBarHolder"></div> 
-    <div class="bodyHolder"></div>
+    <div class="bodyHolder">
+        <div class="projectBuilder /hidden">
+            <div class="projectBuilderForm">
+                <form name="projectBuilder" id="ProjectBuilder" action="" method="post">
+                 <label for="Name">Project Name</label>   
+                 <input type="text" name="Name" id="Name" required>
+                 <label for="dueDate">Project Dueby?</label>
+                 <input type="date" name="dueDate" id="dueDate">
+                 <label for="projectDescription"> Project Description</label>
+                 <input type="text" name="projectDescription" id="projectDescription">
+                 <button type="submit">Creat Project</button>
+                </form>
+            </div>
+        </div>
+    </div>
  </div>   
 </body>
 </html>

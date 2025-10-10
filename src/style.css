@@ -27,7 +27,7 @@ align-items: center;
 }
 .pickAProject{
 height: 50%;
-width: fit-content;
+width: 16%;
 border: 1px solid #222222;
 border-radius: 8px;
 display: flex;
@@ -35,6 +35,28 @@ justify-content: center;
 align-items: center;
 }
 .dropDownArrowIcon{
-height: 80%;
-width: 25%;
+height: 27%;
+width: 21%;
+object-fit: cover;
+padding: 0;
+}
+.pickAProjectDropDown{
+position: fixed;
+width: 197.54px;
+height: 400px;    
+border: 1px solid #222222;
+border-radius: 8px;
+top: 100px;
+left: 145px;
+}
+
+.hidden{
+display: none;
+}
+.flex {
+display: flex;    
+}
+.bodyHolder{
+grid-row:3/6;
+grid-column: 2/6;    
 }
