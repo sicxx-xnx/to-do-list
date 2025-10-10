@@ -13,6 +13,7 @@ desc;
 let creationDate = new Date()
 let DueDate = new Date(date)
 return {
+creatTask: (taskName,TaskDueDate,taskDesc) =>{return {parentProject: ProjectName,taskName,TaskDueDate,taskDesc}},    
 getName: ()=>{return ProjectName},    
 getcreationDate: ()=> {return creationDate},
 getDueDate : ()=> { return DueDate},  
