@@ -18,15 +18,22 @@
      </div>   
     </div> 
     <div class="bodyHolder">
-        <div class="projectBuilder /hidden">
-            <div class="projectBuilderForm">
-                <form name="projectBuilder" id="ProjectBuilder" action="" method="post">
-                 <label for="Name">Project Name</label>   
-                 <input type="text" name="Name" id="Name" required>
-                 <label for="dueDate">Project Dueby?</label>
-                 <input type="date" name="dueDate" id="dueDate">
-                 <label for="projectDescription"> Project Description</label>
-                 <input type="text" name="projectDescription" id="projectDescription">
+        <div class="projectBuilder hidden">
+            <div class="projectBuilderForm flex">
+                <form name="projectBuilder" class="tempname" id="ProjectBuilder" action="" method="post">
+                <img id="formClose"  src="images/4115230-cancel-close-cross-delete_114048.svg" alt="closesign">
+                 <div class="flex inputdiv">
+                     <label for="Name">Project Name</label>
+                     <input type="text" name="Name" id="Name" required>
+                 </div>
+                 <div class="flex inputdiv">
+                     <label for="dueDate">Project Dueby?</label>
+                     <input type="date" name="dueDate" id="dueDate" required >
+                 </div>
+                 <div class="flex inputdiv">
+                     <label for="projectDescription"> Project Description</label>
+                     <input type="text" name="projectDescription" id="projectDescription">
+                 </div>
                  <button type="submit">Creat Project</button>
                 </form>
             </div>
