@@ -1,5 +1,6 @@
-import { pickAProjectHeaderText,projectBuilderForm,projectBuilderFormName,projectBuilderFormDueDate,projectBuilderFormDescrption } from "./DOM";
+import { pickAProjectHeaderText,projectBuilderForm,projectBuilderFormName,projectBuilderFormDueDate,projectBuilderFormDescrption,UnrenderProjectBuildForm,topHeaderButton,renderProjectBuildForm,renderpickAProjectDropDown} from "./DOM";
 import {projectCreation} from "./index"
+import { setcacheasactiveproject,activeProject } from "./projectSidebar";
 import { rendercacheaciveproject } from "./cache";
 export let Projects = JSON.parse(localStorage.getItem("projects")) || []
 
@@ -12,6 +13,13 @@ projectBuilderFormDueDate.value = ""
 projectBuilderFormDescrption.value = ""
 Projects.push(newProject)
 cacheProjects()  
+UnrenderProjectBuildForm()
+if (Projects.length === 1) {
+topHeaderButton.removeEventListener("click",renderProjectBuildForm)  
+topHeaderButton.addEventListener("click",renderpickAProjectDropDown)  
+}
+setcacheasactiveproject(newProject)
+pickAProjectHeaderText.innerText = activeProject.ProjectName
 console.log(Projects)  
 }
 
