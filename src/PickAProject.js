@@ -1,12 +1,14 @@
 import { pickAProjectHeaderText,projectBuilderForm,projectBuilderFormName,projectBuilderFormDueDate,projectBuilderFormDescrption,UnrenderProjectBuildForm,topHeaderButton,renderProjectBuildForm,renderpickAProjectDropDown} from "./DOM";
 import {projectCreation} from "./index"
-import { setcacheasactiveproject,activeProject } from "./projectSidebar";
+import { setcacheasactiveproject,activeProject, injectProjectIntoSidebarAtTimeOfCreation } from "./projectSidebar";
 import { rendercacheaciveproject } from "./cache";
 export let Projects = JSON.parse(localStorage.getItem("projects")) || []
-
+export function setProjects(newProjects) {
+Projects = newProjects    
+}
 export function MakeProject(event){
 event.preventDefault()  
-const randomID = Math.floor(Math.random() * 10)
+const randomID = Math.floor(Math.random() * 1000)
 const newProject = projectCreation(projectBuilderFormName.value,projectBuilderFormDueDate.value,projectBuilderFormDescrption.value,randomID)
 projectBuilderFormName.value = ""
 projectBuilderFormDueDate.value = ""
@@ -20,10 +22,11 @@ topHeaderButton.addEventListener("click",renderpickAProjectDropDown)
 }
 setcacheasactiveproject(newProject)
 pickAProjectHeaderText.innerText = activeProject.ProjectName
+injectProjectIntoSidebarAtTimeOfCreation(newProject)
 console.log(Projects)  
 }
 
-function cacheProjects() {
+export function cacheProjects() {
 const stringprojects = JSON.stringify(Projects) 
 console.log(stringprojects)   
 localStorage.setItem("projects",stringprojects)
@@ -37,7 +40,7 @@ return Projects
 export function rerenderCache() {
 let i = 0    
 for (const project of Projects) {
-Projects[i] = projectCreation(project.ProjectName,project.DueDate,project.desc,project.projectID)  
+Projects[i] = projectCreation(project.ProjectName,project.DueDate,project.desc,project.projectID,project.Tasks)  
 i++ 
 }   
 rendercacheaciveproject()

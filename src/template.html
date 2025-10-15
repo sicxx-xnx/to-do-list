@@ -9,12 +9,16 @@
  <div class="contentHolder">
     <div class="headerHolder">
         <div class="header"><div class="pickAProject"><p class="pickAProjectText">Creat A Task</p><img src="/src/images/8679858_arrow_drop_down_fill_icon.svg" alt="Drop Down Icon" class="dropDownArrowIcon"></div></div>
-        <div class="pickAProjectDropDown hidden">wrap</div>
+        <div class="pickAProjectDropDown hidden" style="flex-direction: column; z-index: 5;">
+        <div class="creatTask">Add New Task</div>
+         <div class="removeProject">Delete Project</div>   
+        </div>
     </div>
     <div class="SideBarHolder">
      <div class="SideBar flex">
         <h2>Your Projects</h2>
         <div class="CreatAProjectSideBar flex"><div class=""></div><p class="CreatAProjectSideBarText">Creat A Project</p><img src="/src/images/211688_forward_arrow_icon.svg" alt="start project icon" class="dropDownArrowIcon"></div>
+        <div class="sidebarprojectholder"></div>
      </div>   
     </div> 
     <div class="bodyHolder">
@@ -38,6 +42,30 @@
                 </form>
             </div>
         </div>
+        <div class="taskbuilderformholder hidden">
+            <form name="taskBuilder" id="taskBuilder" action="" method="post">
+                <img id="taskFormClose"  src="images/4115230-cancel-close-cross-delete_114048.svg" alt="closesign">
+                <div>
+                    <label for="Taskname">Task Name</label>
+                    <input type="text" name="Taskname" id="Taskname">
+                </div>
+                <div class="div">
+                    <label for="taskDueDate">Due By?</label>
+                    <input type="date" name="taskDueDate" id="taskDueDate">
+                </div>
+                <button type="submit">Creat Task</button>
+            </form>
+        </div>
+        <div class="tasksHolder">
+            <div class="taskIcons">
+                <ul class="taskIconsList">
+                    <li id="CompleteTask">Complete Task</li>
+                    <li>Edit Task</li>
+                </ul>
+            </div>
+            <div class="MainTaskHolder"></div>
+        </div>
+
     </div>
  </div>   
 </body>

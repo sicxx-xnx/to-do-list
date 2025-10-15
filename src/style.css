@@ -42,14 +42,21 @@ padding: 0;
 }
 .pickAProjectDropDown{
 position: fixed;
-width: 197.54px;
-height: 400px;    
+width: 192px;
+height: 140px;    
 border: 1px solid #222222;
 border-radius: 8px;
 top: 100px;
-left: 145px;
+left: 141px;
+background-color: white;
+align-content: center;
+gap: 10px;
 }
-
+.pickAProjectDropDown > div{
+border: 1px black solid;
+text-align: center;
+cursor: pointer;
+}
 .hidden{
 display: none;
 }
@@ -123,4 +130,74 @@ color: red;
 #formClose{
 height: 20px;    
 align-self: flex-end;
+}
+
+.taskbuilderformholder{
+width: 1121px;
+height: 100%; 
+position: fixed;
+background-color: rgba(79, 86, 94, 0.322);   
+justify-content: center;
+align-items: center;
+}
+
+#taskFormClose{
+height: 20px;    
+align-self: flex-end;   
+margin: 5px; 
+}
+
+#taskBuilder{
+width: 30%;
+height: 35%;
+border: 1px black solid;
+border-radius: 8px;    
+background-color: white;
+gap: 20px;
+display: flex;
+flex-direction: column;
+}
+#taskBuilder > div {
+display: flex;
+flex-direction: column;    
+gap: 10px;
+padding: 5px;
+}
+#taskBuilder > button { 
+    margin: 10px;   
+}
+.taskIconsList{
+display: flex;
+list-style: none;
+gap: 10px;
+font: 1.4rem;    
+width: 100%;
+justify-content: space-around;
+padding: 10px;
+}
+.taskIconsList > li {
+border: 1px solid salmon;   
+background-color: salmon; 
+width: 300px;
+height: 50px;
+border-radius: 8px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.MainTaskHolder{
+display: flex;
+gap: 10px;    
+padding: 5px;
+}
+.MainTaskHolder > div{
+border: 1px solid rgb(174, 173, 173);
+}
+.MainTaskHolder > div:hover{
+border: 1px solid black;
+}
+.dueby::before{
+content: "Due by: ";    
 }
