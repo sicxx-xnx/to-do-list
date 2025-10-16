@@ -1,4 +1,4 @@
-import { pickAProjectHeaderText,projectBuilderForm,projectBuilderFormName,projectBuilderFormDueDate,projectBuilderFormDescrption,UnrenderProjectBuildForm,topHeaderButton,renderProjectBuildForm,renderpickAProjectDropDown} from "./DOM";
+import { pickAProjectHeaderText,projectBuilderForm,projectBuilderFormName,projectBuilderFormDueDate,projectBuilderFormDescrption,UnrenderProjectBuildForm,topHeaderButton,renderProjectBuildForm,renderpickAProjectDropDown, TaskMainHolder} from "./DOM";
 import {projectCreation} from "./index"
 import { setcacheasactiveproject,activeProject, injectProjectIntoSidebarAtTimeOfCreation } from "./projectSidebar";
 import { rendercacheaciveproject } from "./cache";
@@ -22,6 +22,7 @@ topHeaderButton.addEventListener("click",renderpickAProjectDropDown)
 }
 setcacheasactiveproject(newProject)
 pickAProjectHeaderText.innerText = activeProject.ProjectName
+TaskMainHolder.innerHTML = ""
 injectProjectIntoSidebarAtTimeOfCreation(newProject)
 console.log(Projects)  
 }

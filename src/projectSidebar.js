@@ -1,5 +1,5 @@
 import { Projects, setProjects } from "./PickAProject";
-import { sidebar, pickAProjectHeaderText,sidebarprojectholder,topHeaderButton, renderProjectBuildForm,renderpickAProjectDropDown, unrenderpickaprojectdropdown, } from "./DOM";
+import { sidebar, pickAProjectHeaderText,sidebarprojectholder,topHeaderButton, renderProjectBuildForm,renderpickAProjectDropDown, unrenderpickaprojectdropdown,TaskMainHolder } from "./DOM";
 import { cacheactiveproject } from "./cache";
 import { cacheProjects } from "./PickAProject";
 import { injectTaskstoDom } from "./taskCreation";
@@ -79,9 +79,11 @@ setProjects(holder)
 cacheProjects()  
 setcacheasactiveproject(Projects[0]) 
 cacheactiveproject()
+TaskMainHolder.innerHTML = ""
 let raw = localStorage.getItem("activeproject")
 if (raw && raw !== "undefined") {
-pickAProjectHeaderText.innerText = activeProject.ProjectName    
+pickAProjectHeaderText.innerText = activeProject.ProjectName  
+injectTaskstoDom()   
 } else {
 pickAProjectHeaderText.innerText = "Creat New Project"  
 unrenderpickaprojectdropdown() 
